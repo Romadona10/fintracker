@@ -14,7 +14,7 @@ export class AddExpenseComponent implements OnInit {
   expenseForm!: FormGroup;
   isCustomCategory: boolean = false;
   categories: string[] = ['Groceries', 'Rent','Religious-giving', 'Utilities', 'Transportation', 'Entertainment', 'Food', 'Electronics',
-     'Clothing', 'Health', 'Insurance', 'Wardrobe', 'Baby', 'Subscription', 'Beauty', 'Bills', 'Sports'];
+     'Clothing', 'Health', 'Insurance', 'Wardrobe', 'Baby', 'Subscription', 'Beauty', 'Bills', 'Sports','Debts'];
 
   constructor(
     private fb: FormBuilder,
