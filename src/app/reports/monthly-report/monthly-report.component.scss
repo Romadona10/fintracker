@@ -19,6 +19,15 @@
         height: auto !important;
         cursor: pointer;
       }
+      @media (max-width: 600px) {
+        height: 300px; // Reduce the height for smaller screens
+        padding: 10px; // Add padding to ensure proper spacing
+      }
+    
+      canvas {
+        max-width: 100%; // Ensure the chart resizes properly
+        height: 100% !important; // Maintain aspect ratio
+      }
     }
     mat-form-field {
       width: 100%;

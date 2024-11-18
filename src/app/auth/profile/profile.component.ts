@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
       (response) => {
         this.user.name = response.fullName;
         this.user.email = response.email;
-        this.user.profileImage = `http://localhost:5000/uploads/${response.profileImage}`; // profileImage now includes 'uploads/'
+        this.user.profileImage = `https://expensetracker-backend-q5pq.onrender.com/uploads/${response.profileImage}`; // profileImage now includes 'uploads/'
       },
       (error) => {
         console.error('Error fetching user profile:', error);

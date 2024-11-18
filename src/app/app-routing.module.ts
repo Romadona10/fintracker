@@ -27,9 +27,10 @@ const routes: Routes = [
      { path: 'admin', component: AdminComponent,canActivate: [AdminGuard] },
      { path: 'help', component: HelpComponent },
      { path: 'notifications', component: NotificationsComponent },
+     { path: 'income', loadChildren: () => import('./income/income.module').then(m => m.IncomeModule) }, // Default route
 
-     { path: '', redirectTo: '/auth', pathMatch: 'full' }, // Default route
-  { path: '**', redirectTo: '/auth' }
+     { path: '', redirectTo: '/auth/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/auth/login' }
 ];
 
 @NgModule({

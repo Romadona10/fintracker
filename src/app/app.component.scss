@@ -1,24 +1,24 @@
-/* Full height for the container */
+
 .app-container {
   height: 100vh;
   overflow-x: hidden;
-  background-image: url('/assets/romalogo.webp');
+  background-image: url('/assets/app-logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
 
-/* Sidebar for web */
+
 mat-sidenav {
   width: 250px;
   background: #ffffff; 
 }
 
-/* Mobile view adjustments for sidenav */
+
 @media (max-width: 768px) {
   mat-sidenav {
-    width: 100%; /* Full width on mobile */
+    width: 100%; 
     position: absolute;
   }
 }
@@ -28,25 +28,29 @@ mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 2;
+
+  .buttons{
+   gap: 30px;
+  }
 }
 
-/* Content padding */
+
 .content {
   padding: 20px;
 }
 
-/* Spacer for alignment */
+
 .spacer {
   flex: 1 1 auto;
 }
 
-/* Active link style */
+
 .active-link {
   background-color: rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
 
-/* Sidenav colors for light and dark mode */
+
 mat-sidenav {
   background-color: var(--sidenav-bg-color, #ffffff); /* Light mode background */
   color: var(--sidenav-text-color, #000000); /* Light mode text color */

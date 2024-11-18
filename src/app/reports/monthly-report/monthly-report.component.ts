@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class MonthlyReportComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  chartOptions: ChartOptions = { 
+  chartOptions: ChartOptions = {
     responsive: true,
     plugins: {
       legend: {
@@ -30,8 +30,8 @@ export class MonthlyReportComponent implements OnInit {
   chartType: ChartType = 'bar';
   selectedMonth: string = '';
   months: string[] = [
-    'January', 'February', 'March', 'April', 'May','June',
-    'July','August','September','October','November','December'
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
   ];
   totalAmount: number | null = null;
   chartData = {
@@ -40,12 +40,16 @@ export class MonthlyReportComponent implements OnInit {
         data: [], // Will be updated with API data
         label: 'Expenses',
         backgroundColor: [
-          'rgb(254, 236, 55)', 
-          'rgb(255, 162, 76)', 
+          'rgb(254, 236, 55)',
+          'rgb(255, 162, 76)',
           'rgb(255, 119, 183)',
           'rgb(9, 16, 87)',
-         ' rgb(175, 23, 64)',
-         'rgb(13, 146, 244)'
+          ' rgb(175, 23, 64)',
+          'rgb(13, 146, 244)',
+          'rgb(0, 11, 88)',
+          'rgb(0, 49, 97)',
+          'rgb(0, 106, 103)',
+          'rgb(255, 244, 183)'
         ],
       }
     ],
@@ -53,13 +57,13 @@ export class MonthlyReportComponent implements OnInit {
   };
   userId: string = ''; // Fetch this from the AuthService
 
-  constructor(private reportService: ReportService, private authService: AuthService) {}
+  constructor(private reportService: ReportService, private authService: AuthService) { }
 
   ngOnInit(): void {
     // this.selectedMonth = this.months[0];
     const currentMonthIndex = new Date().getMonth();
     this.selectedMonth = this.months[currentMonthIndex];
-    this.userId = localStorage.getItem('userId') || ''; 
+    this.userId = localStorage.getItem('userId') || '';
     const currentYear = new Date().getFullYear();
     this.loadReportData(this.selectedMonth, currentYear);
   }

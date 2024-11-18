@@ -30,6 +30,10 @@ import { ExportModalComponent } from './dialogs/export-modal/export-modal.compon
 import { NotificationsComponent } from './dialogs/notifications/notifications.component';
 import { NoDataModalComponent } from './dialogs/no-data-modal/no-data-modal.component';
 import { EmailownerComponent } from './dialogs/emailowner/emailowner.component';
+import { jwtDecode } from 'jwt-decode';
+import { SavingsNotificationsComponent } from './dialogs/savings-notifications/savings-notifications.component';
+
+
 
 
 @NgModule({
@@ -42,6 +46,10 @@ import { EmailownerComponent } from './dialogs/emailowner/emailowner.component';
     NotificationsComponent,
     NoDataModalComponent,
     EmailownerComponent,
+    SavingsNotificationsComponent,
+    
+   
+   
   ],
   imports: [
     BrowserModule,
